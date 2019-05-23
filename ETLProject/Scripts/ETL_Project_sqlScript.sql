@@ -1,31 +1,39 @@
 CREATE DATABASE fifa_db;
 
-#ALTER DATABASE fifa_db DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-
 USE fifa_db;
 
 CREATE TABLE teams(
-	team_id  INT PRIMARY KEY,
+	team_id  INT,
     team_name TEXT,
-    league_id INT,
-    transfer_budget INT,
-    country_id INT
+    team_league TEXT,
+    rival_team_id INT,
+    attack INT,
+    midfield INT,
+	defence INT,
+    transfer_budget TEXT,
+    country TEXT    
 );
 
-CREATE TABLE leagues(
-	league_id INT AUTO_INCREMENT PRIMARY KEY,
-    league_name TEXT,
-    country_id INT
-);
-
-CREATE TABLE player_MV(
-	player_id INT PRIMARY KEY, 
+CREATE TABLE players_mv( 
     player_name TEXT,
-    player_marketValue INT
+    player_marketValue TEXT
 );
 
-CREATE TABLE countries(
-	country_id INT PRIMARY KEY,
-    country_name TEXT
+CREATE TABLE players(
+	player_id INT,
+    player_name TEXT,
+    age INT,
+    nationality TEXT,
+    overall INT,
+    potencial INT,
+    club TEXT,
+    player_value TEXT,
+    wage TEXT,
+    relase_clause TEXT
 );
 
+alter database fifa_db character set utf8mb4 collate utf8mb4_unicode_ci;
+
+alter table fifa_db.teams convert to character set utf8mb4 collate utf8mb4_unicode_ci;
+
+alter table fifa_db.players convert to character set utf8mb4 collate utf8mb4_unicode_ci;
