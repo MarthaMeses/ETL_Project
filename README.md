@@ -19,3 +19,11 @@ Tables were normalized with respect to league, team, country. It was checked for
 Relational database was chosen. It was selected because the later focus of the project will be on the nationality of the players, and the country were they are playing. A relational database allows an easy way to examine such relations.<br>
 All tables were loaded into a SQL local database. <br>
 Several queries were tried that could be used for further analysis.
+
+
+
+#### Prepared by:
+* Morado Cuevas
+* Sandra Mejia
+* Martha Meses
+* Carlos Vargas
